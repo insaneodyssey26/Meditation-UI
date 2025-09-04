@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.google.android.material.chip.Chip
 import com.masum.meditationui.R
@@ -38,6 +39,7 @@ fun HomeScreen () {
         Column {
          GreetingSection()
             ChipSection(chips = listOf("Sweet Sleep", "Insomnia", "Depression"))
+            CurrentMeditation()
         }
     }
 }
@@ -118,6 +120,16 @@ fun CurrentMeditation (
             .padding(horizontal = 15.dp, vertical = 20.dp)
             .fillMaxWidth()
     ){
-
+        Text(
+            text = "Daily Thought",
+            style = MaterialTheme.typography.headlineLarge,
+            color = TextWhite,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Meditation - 3-10 min",
+            style = MaterialTheme.typography.bodyLarge,
+            color = TextWhite
+        )
     }
 }
