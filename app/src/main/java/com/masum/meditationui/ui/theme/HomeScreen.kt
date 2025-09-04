@@ -120,16 +120,18 @@ fun CurrentMeditation (
             .padding(horizontal = 15.dp, vertical = 20.dp)
             .fillMaxWidth()
     ){
-        Text(
-            text = "Daily Thought",
-            style = MaterialTheme.typography.headlineLarge,
-            color = TextWhite,
-            fontWeight = FontWeight.Bold
-        )
-        Text(
-            text = "Meditation - 3-10 min",
-            style = MaterialTheme.typography.bodyLarge,
-            color = TextWhite
-        )
+        Column {
+            Text(
+                text = "Daily Thought",
+                style = MaterialTheme.typography.headlineLarge,
+                color = TextWhite,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = "Meditation - 3-10 min",
+                style = MaterialTheme.typography.bodyLarge,
+                color = TextWhite
+            )
+        }
     }
-}
+        }
