@@ -86,20 +86,38 @@ fun ChipSection(
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier
-                .padding(start = 15.dp, top = 15.dp, bottom = 15.dp)
-                .clickable {
-                    selectedChipIndex = it
-                }
-                .clip(RoundedCornerShape(15.dp))
-                .background(
-                    if (it == selectedChipIndex) ButtonBlue else DarkerButtonBlue
-                )
-                .padding(15.dp)
+                    .padding(start = 15.dp, top = 15.dp, bottom = 15.dp)
+                    .clickable {
+                        selectedChipIndex = it
+                    }
+                    .clip(RoundedCornerShape(15.dp))
+                    .background(
+                        if (it == selectedChipIndex) ButtonBlue else DarkerButtonBlue
+                    )
+                    .padding(15.dp)
             ) {
                 Text(
                     text = chips[it], color = TextWhite
                 )
             }
         }
+    }
+}
+
+@Composable
+fun CurrentMeditation (
+    color: Color = LightRed
+) {
+    Row (
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = Modifier
+            .padding(15.dp)
+            .clip(RoundedCornerShape(10.dp))
+           .background(color)
+            .padding(horizontal = 15.dp, vertical = 20.dp)
+            .fillMaxWidth()
+    ){
+
     }
 }
