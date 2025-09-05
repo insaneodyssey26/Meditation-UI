@@ -117,7 +117,7 @@ fun CurrentMeditation (
         modifier = Modifier
             .padding(15.dp)
             .clip(RoundedCornerShape(10.dp))
-           .background(color)
+            .background(color)
             .padding(horizontal = 15.dp, vertical = 20.dp)
             .fillMaxWidth()
     ){
@@ -150,4 +150,11 @@ fun CurrentMeditation (
             )
         }
     }
+}
+
+@Composable
+fun FeaturedSection(
+
+) {
+    
 }
