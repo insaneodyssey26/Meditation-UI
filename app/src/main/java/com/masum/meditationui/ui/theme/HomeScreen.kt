@@ -28,6 +28,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.google.android.material.chip.Chip
+import com.masum.meditationui.Feature
 import com.masum.meditationui.R
 import java.lang.annotation.RetentionPolicy
 
@@ -154,7 +155,16 @@ fun CurrentMeditation (
 
 @Composable
 fun FeaturedSection(
-
+    features: List<Feature>
 ) {
-    
+    Column (
+        modifier = Modifier
+            .fillMaxWidth()
+    ){
+        Text(
+            text = "Features",
+            style = MaterialTheme.typography.headlineLarge,
+            modifier = Modifier.padding(15.dp),
+        )
+    }
 }
