@@ -225,5 +225,16 @@ fun FeatureItems(
         val lightColor3 = Offset(0.3f, height * 0.35f)
         val lightColor4 = Offset(0.65f, height.toFloat())
         val lightColor5 = Offset(1.4f, -height.toFloat() / 3f)
+
+        val lightColorPath = Path().apply {
+            moveTo(lightColor1.x, lightColor1.y)
+            standardQuadFromTo(lightColor1, lightColor2)
+            standardQuadFromTo(lightColor2, lightColor3)
+            standardQuadFromTo(lightColor3, lightColor4)
+            standardQuadFromTo(lightColor4, lightColor5)
+            lineTo(width.toFloat() + 100f, height.toFloat() + 100f)
+            lineTo(-100f, height.toFloat() + 100f)
+            close()
+        }
     }
 }
