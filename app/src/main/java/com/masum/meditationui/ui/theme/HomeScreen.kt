@@ -31,6 +31,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -205,5 +206,15 @@ fun FeatureItems(
         val mediumColor3 = Offset(0.4f, height * 0.05f)
         val mediumColor4 = Offset(0.75f, height * 0.7f)
         val mediumColor5 = Offset(1.4f, -height.toFloat())
+
+        val mediumColorPath = Path().apply {
+            moveTo(mediumColor1.x, mediumColor1.y)
+            quadraticBezierTo(
+                mediumColor2.x,
+                mediumColor2.y,
+                (mediumColor1.x + mediumColor2.x) / 2f,
+                (mediumColor1.y + mediumColor2.y) / 2f,
+            )
+        }
     }
 }
