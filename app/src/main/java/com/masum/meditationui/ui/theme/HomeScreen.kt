@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import com.google.android.material.chip.Chip
 import com.masum.meditationui.Feature
 import com.masum.meditationui.R
+import com.masum.meditationui.standardQuadFromTo
 import java.lang.annotation.RetentionPolicy
 
 @Composable
@@ -209,12 +210,10 @@ fun FeatureItems(
 
         val mediumColorPath = Path().apply {
             moveTo(mediumColor1.x, mediumColor1.y)
-            quadraticBezierTo(
-                mediumColor2.x,
-                mediumColor2.y,
-                (mediumColor1.x + mediumColor2.x) / 2f,
-                (mediumColor1.y + mediumColor2.y) / 2f,
-            )
+            standardQuadFromTo(mediumColor1, mediumColor2)
+            standardQuadFromTo(mediumColor2, mediumColor3)
+            standardQuadFromTo(mediumColor3, mediumColor4)
+            standardQuadFromTo(mediumColor4, mediumColor5)
         }
     }
 }
