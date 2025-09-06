@@ -39,6 +39,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.android.material.chip.Chip
+import com.masum.meditationui.BottomMenuContent
 import com.masum.meditationui.Feature
 import com.masum.meditationui.R
 import com.masum.meditationui.standardQuadFromTo
@@ -232,7 +233,7 @@ fun FeatureItems(
             .aspectRatio(1f)
             .clip(RoundedCornerShape(10.dp))
             .background(feature.darkColor)
-    ){
+    ) {
         val width = constraints.maxWidth
         val height = constraints.maxHeight
 
@@ -311,11 +312,23 @@ fun FeatureItems(
                     .clickable {
 
                     }
-                    .align (Alignment.BottomEnd)
+                    .align(Alignment.BottomEnd)
                     .clip(RoundedCornerShape(10.dp))
                     .background(ButtonBlue)
                     .padding(vertical = 6.dp, horizontal = 15.dp)
             )
         }
     }
+}
+
+@Composable
+fun BottomNavigation(
+    items: List<BottomMenuContent>,
+    modifier: Modifier = Modifier,
+    activeHighLightColor: Color = ButtonBlue,
+    activeTextColor: Color = Color.White,
+    inactiveTextColor: Color = AquaBlue,
+    initialSelectedItemIndex: Int = 0
+) {
+
 }
