@@ -218,5 +218,12 @@ fun FeatureItems(
             lineTo(-100f, height.toFloat() + 100f)
             close()
         }
+
+        // Light colors
+        val lightColor1 = Offset(0f, height * 0.35f)
+        val lightColor2 = Offset(0.1f, height * 0.4f)
+        val lightColor3 = Offset(0.3f, height * 0.35f)
+        val lightColor4 = Offset(0.65f, height.toFloat())
+        val lightColor5 = Offset(1.4f, -height.toFloat() / 3f)
     }
 }
