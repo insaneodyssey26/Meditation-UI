@@ -37,6 +37,7 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.google.android.material.chip.Chip
 import com.masum.meditationui.Feature
 import com.masum.meditationui.R
@@ -53,6 +54,7 @@ fun HomeScreen () {
          GreetingSection()
             ChipSection(chips = listOf("Sweet Sleep", "Insomnia", "Depression"))
             CurrentMeditation()
+
         }
     }
 }
@@ -183,7 +185,7 @@ fun FeaturedSection(
             modifier = Modifier.fillMaxHeight()
         ) {
             items(features.size) {
-
+                FeatureItems(feature = features[it])
             }
         }
     }
@@ -249,6 +251,39 @@ fun FeatureItems(
             drawPath(
                 path = lightColorPath,
                 color = feature.lightColor
+            )
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(15.dp)
+        ) {
+            Text(
+                text = feature.title,
+                style = MaterialTheme.typography.headlineMedium,
+                lineHeight = 26.sp,
+                modifier = Modifier.align(Alignment.TopStart)
+            )
+            Icon(
+                painter = painterResource(id = feature.iconId),
+                contentDescription = feature.title,
+                tint = Color.White,
+                modifier = Modifier
+                    .align(Alignment.BottomStart)
+            )
+            Text(
+                text = "Start",
+                color = TextWhite,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .clickable {
+
+                    }
+                    .align (Alignment.BottomEnd)
+                    .clip(RoundedCornerShape(10.dp))
+                    .background(ButtonBlue)
+                    .padding(vertical = 6.dp, horizontal = 15.dp)
             )
         }
     }
