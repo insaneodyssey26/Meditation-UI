@@ -214,6 +214,9 @@ fun FeatureItems(
             standardQuadFromTo(mediumColor2, mediumColor3)
             standardQuadFromTo(mediumColor3, mediumColor4)
             standardQuadFromTo(mediumColor4, mediumColor5)
+            lineTo(width.toFloat() + 100f, height.toFloat() + 100f)
+            lineTo(-100f, height.toFloat() + 100f)
+            close()
         }
     }
 }
